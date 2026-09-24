@@ -9,5 +9,10 @@ public class TestHijo {
  
         hijo.imprimir();
         System.out.println(hijo.toString());
+        
+        hijo.ahorrar(2.5);
+        hijo.ahorrar(2.9);
+ 
+        System.out.println(hijo.toString());
     }
 }

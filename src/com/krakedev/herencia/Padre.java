@@ -3,6 +3,7 @@ package com.krakedev.herencia;
 public class Padre implements Cantante {
     private int virtudes;
     private int defectos;
+    private double totalAhorros;
 
     public Padre() {}
 
@@ -26,19 +27,33 @@ public class Padre implements Cantante {
     public void setDefectos(int defectos) {
         this.defectos = defectos;
     }
+    
+    public double getTotalAhorros(){
+        return totalAhorros;
+    }
+    
+    public void setTotalAhorros(double totalAhorros) {
+        this.totalAhorros = totalAhorros;
+    }
 
     public void imprimir() {
         System.out.println("Virtudes: " + virtudes);
         System.out.println("Defectos: " + defectos);
     }
 
+    
     @Override
-    public String toString() {
-        return "Padre [virtudes=" + virtudes + ", defectos=" + defectos + "]";
-    }
+	public String toString() {
+		return "Padre [virtudes=" + virtudes + ", defectos=" + defectos + ", totalAhorros=" + totalAhorros + "]";
+	}
 
-    @Override
+	@Override
     public void cantar() {
         System.out.println("Cantando");
     }
+	
+	public void ahorrar(double monto) {
+        totalAhorros += monto;
+    }
 }
+
