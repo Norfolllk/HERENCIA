@@ -8,8 +8,8 @@ public class Hija extends Padre {
         super();
     }
  
-    public Hija(int virtudes, int defectos, int munecas) {
-        super(virtudes, defectos);
+    public Hija(int virtudes, int defectos, String nombre, int munecas) {
+        super(virtudes, nombre, defectos);
         this.munecas = munecas;
     }
  

@@ -4,12 +4,18 @@ public class Padre implements Cantante {
     private int virtudes;
     private int defectos;
     private double totalAhorros;
+    private String nombre;
 
     public Padre() {}
+    
+    public Padre(String nombre){
+    	this.nombre = nombre;
+    }
 
-    public Padre(int virtudes, int defectos) {
+    public Padre(int virtudes, String nombre, int defectos) {
         this.virtudes = virtudes;
         this.defectos = defectos;
+        this.nombre = nombre;
     }
 
     public int getVirtudes() {
@@ -35,16 +41,24 @@ public class Padre implements Cantante {
     public void setTotalAhorros(double totalAhorros) {
         this.totalAhorros = totalAhorros;
     }
+    
+    public String getNombre() {
+		return nombre;
+	}
 
-    public void imprimir() {
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public void imprimir() {
         System.out.println("Virtudes: " + virtudes);
         System.out.println("Defectos: " + defectos);
     }
-
-    
-    @Override
+	
+	@Override
 	public String toString() {
-		return "Padre [virtudes=" + virtudes + ", defectos=" + defectos + ", totalAhorros=" + totalAhorros + "]";
+		return "Padre [virtudes=" + virtudes + ", defectos=" + defectos + ", totalAhorros=" + totalAhorros + ", nombre="
+				+ nombre + "]";
 	}
 
 	@Override
